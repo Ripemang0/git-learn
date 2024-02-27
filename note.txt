@@ -1,0 +1,4 @@
+创建分支
+1.      git checkout 分支名  --创建分支
+        git branch 分支名    --切换分支
+2.      git checkout -b 分支名 --快速创建切换分支
