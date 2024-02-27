@@ -6,3 +6,26 @@
 1.      切换到目标分支
         git merge 被合并分支
 HEAD 始终指向该分支最新一次提交
+
+050 git stash命令的使用
+用于将临时变更不跟踪，也不保存的临时存储起来，以栈的方式进行，先进后出
+git stash 将目前变更入栈
+git stash apply 读取栈顶变更
+使用git stash apply 索引号 读取缓存时必须处于最初未更改状态，即将目前读取的stash进行压栈
+git stash list 查看目前stash列表
+git stash push -m ""压栈时带有信息
+git stash pop 索引号 弹出读取栈中数据，与apply不同栈中数据直接删除 apply会保留
+stash删除命令  git stash drop 索引号 ；git stash clear
+
+reflog的使用
+恢复被删除的提交或分支
+git reflog查看近30天的修改提交记录
+git reset --hard HEAD~步数，删除硬删除
+git reset --hard 哈希值 恢复
+删除分支 git branch -D name
+git checkout 哈希值 分离帽
+创建一个新分支 git branch name
+git checkout name
+or git checkout -b name
+or git switch -c name
+
