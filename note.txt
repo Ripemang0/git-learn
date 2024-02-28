@@ -29,3 +29,16 @@ git checkout name
 or git checkout -b name
 or git switch -c name
 
+分支合并
+the fast-forward merge
+主分支没有新的提交，分支合并。不创建新的提交，将主分支head指向，feature合并的提交head
+git merge branchname 不创建新提交头直接指向分支的最新提交
+git merge --squash branchname 即将合并的分支放到status里，在使用commit提交。即将feature的所有提交整合为一个提交，提交到主分支
+tne non fast-forward merge 
+recursive merge
+e.1 git merge --no-ff merge
+分支每次提交被合并+1次总操作整合提交
+当合并，主分支有新的提交的分支时默认 recursive merge
+主分支最新提交在次分支合并提交之前
+git merge --squash branchname 同上 分支所有提交整合为一个提交到status区自行提交
+
