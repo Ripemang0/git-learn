@@ -1,0 +1,5 @@
+建立与github链接
+git remote add origin URL
+向github存入本地数据
+git push
+git pull
