@@ -23,7 +23,9 @@ git reflog查看近30天的修改提交记录
 git reset --hard HEAD~步数，删除硬删除
 git reset --hard 哈希值 恢复
 删除分支 git branch -D name
-git checkout 哈希值 分离帽
+
+
+git checkout 哈希值 分离帽 (被删除分支提交的哈希值，没有新提交的分支直接重新创建)
 创建一个新分支 git branch name
 git checkout name
 or git checkout -b name
@@ -42,3 +44,26 @@ e.1 git merge --no-ff merge
 主分支最新提交在次分支合并提交之前
 git merge --squash branchname 同上 分支所有提交整合为一个提交到status区自行提交
 
+rebase指令
+在feature分支中使用rebase指令，进行基变变换，使master最新提交更新到feature中
+场景：不需要额外提交总commit，分支需要用到master新提交的功能。
+变换后可以使用 fast forward合并，不产生额外commit
+rebase后之前的分支提交 id会变换，公共库需要注意
+
+合并冲突
+git log --merge 合并日志
+git diff
+解决后需要自行添加并提交
+vscode有适应改变
+
+git cherry-pick hash 
+只提交分支的某个提交到主分支，两次提交id不同
+会造成重复提交
+
+标签
+git tag 列出所有标签
+git show tagName 展示tagname
+标签可以使用checkout直接访问分离头
+git tag tagName hash 创建轻量级标签
+git tag tagName -a tagName -m "" 创建带注释的标签
+git tag -d tagName 删除标签
