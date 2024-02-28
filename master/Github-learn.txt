@@ -1,5 +1,8 @@
 建立与github链接
 git remote add origin URL
 向github存入本地数据
-git push
+git push orgin branchname
 git pull
+
+push时需要登陆github账号
+or使用token(profile > developer setting > token 设置)
