@@ -32,3 +32,11 @@ git branch -u origin branchname
 2. git branch --track branchname orgin/branchname创建本地local branch 并跟踪
  git clone 克隆网络仓库时默认master为跟踪分支，其他分支需要手动创建跟踪
 
+删除网络分支以及网络提交
+1、网络分支
+git branch --delete --remotes origin/branchname 删除remote tracking branch
+删除网络分支github git push origin --delete branchname （自动删除网络跟踪分支）
+2、网络提交
+git reset --hard head~
+git push 会被警告 落后于网络版本
+git push --force origin master 强制删除 回退成功
