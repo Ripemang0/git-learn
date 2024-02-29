@@ -19,7 +19,6 @@ git fetch 更新remote tracking branch 使用checkout分离头
 git remote 显示当前连接的服务器
 git remote show origin
 git branch -vv显示连接
-<<<<<<< HEAD
 git branch --track branchname orgin/branchname
 local tracking branchname and remote tracking branchname（自动化链接交换本地与网络仓库）
 
@@ -32,7 +31,4 @@ git branch -u origin branchname
 当网络仓库创建新分支后，本地使用git fetch更新remote tracking branch
 2. git branch --track branchname orgin/branchname创建本地local branch 并跟踪
  git clone 克隆网络仓库时默认master为跟踪分支，其他分支需要手动创建跟踪
-=======
-git branch -track branchname orgin/branchname
-local tracking branchname and remote tracking branchname（自动化链接交换本地与网络仓库）
->>>>>>> dc38d9e1afa56bccf31feda59d94e33e0f2542f0
+
