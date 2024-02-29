@@ -6,3 +6,28 @@ git pull
 
 push时需要登陆github账号
 or使用token(profile > developer setting > token 设置)
+
+git branch -a 显示所有分支包括 remote tracking branch
+git branch -r 显示网络跟踪分支
+远程跟踪分支是网络分支在本地的一个副本(只读)
+git pull = git fetch + git merge
+
+git ls-remote 查看网络库上可用的所有分支
+git fetch 更新remote tracking branch 使用checkout分离头
+需要手动创建remotebranch 
+
+git remote 显示当前连接的服务器
+git remote show origin
+git branch -vv显示连接
+git branch --track branchname orgin/branchname
+local tracking branchname and remote tracking branchname（自动化链接交换本地与网络仓库）
+
+git branch -u origin branchname
+会自动创建local track brach 并链接
+不用手动创建locak track branch并跟踪
+--连接后可以直接使用git push 上传
+在上传时自动更新至网络仓库上
+
+当网络仓库创建新分支后，本地使用git fetch更新remote tracking branch
+2. git branch --track branchname orgin/branchname创建本地local branch 并跟踪
+ git clone 克隆网络仓库时默认master为跟踪分支，其他分支需要手动创建跟踪
